@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///C:/Users/HP/Desktop/Web%20DEVELOPMENT/CARS/ai-thon.html/hi.html/hi.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Learning Assistant</title>
+  <link rel="stylesheet" href="./Code Learning Assistant_files/hi.css">
+</head>
+<body>
+  <header>
+    <h1>💡 Code Learning &amp; Debugging Assistant</h1>
+    <nav>
+      <ul>
+        <li><a href="file:///C:/Users/HP/Desktop/Web%20DEVELOPMENT/CARS/ai-thon.html/hi.html/hi.html#editor">Code Editor</a></li>
+        <li><a href="file:///C:/Users/HP/Desktop/Web%20DEVELOPMENT/CARS/ai-thon.html/hi.html/hi.html#tutorials">Tutorials</a></li>
+        <li><a href="file:///C:/Users/HP/Desktop/Web%20DEVELOPMENT/CARS/ai-thon.html/hi.html/hi.html#exercises">Exercises</a></li>
+        <li><a href="file:///C:/Users/HP/Desktop/Web%20DEVELOPMENT/CARS/ai-thon.html/hi.html/hi.html#debugger">Debugger</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="editor">
+      <h2>🧑‍💻 Code Editor</h2>
+      <textarea id="code-input" placeholder="Write your code here..."></textarea>
+      <button id="analyze-btn">Analyze Code</button>
+      <div id="analysis-output"></div>
+    </section>
+
+    <section id="tutorials">
+      <h2>📘 Interactive Tutorials</h2>
+      <p>Step-by-step guides to learn Python, JavaScript, and more.</p>
+      <ul>
+        <li>Variables and Data Types</li>
+        <li>Loops and Conditions</li>
+        <li>Functions and Scope</li>
+        <li>Debugging Techniques</li>
+      </ul>
+    </section>
+
+    <section id="exercises">
+      <h2>🧠 Programming Exercises</h2>
+      <label for="difficulty">Choose difficulty:</label>
+      <select id="difficulty">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+      <button id="generate-exercise">Generate Exercise</button>
+      <div id="exercise-output"></div>
+    </section>
+
+    <section id="debugger">
+      <h2>🛠 Debugging Suggestions</h2>
+      <p>Paste your code above and click "Analyze" to get error insights and fixes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Code Learning Assistant</p>
+  </footer>
+
+  <script>
+    document.getElementById("analyze-btn").addEventListener("click", () => {
+      const code = document.getElementById("code-input").value;
+      document.getElementById("analysis-output").innerText =
+        code.includes("print") ? "Looks good! No syntax errors detected." : "Tip: Did you forget to use 'print()'?";
+    });
+
+    document.getElementById("generate-exercise").addEventListener("click", () => {
+      const level = document.getElementById("difficulty").value;
+      const output = document.getElementById("exercise-output");
+      if (level === "Beginner") {
+        output.innerText = "Exercise: Write a Python program to check if a number is even or odd.";
+      } else if (level === "Intermediate") {
+        output.innerText = "Exercise: Create a function that returns the second largest number in a list.";
+      } else {
+        output.innerText = "Exercise: Build a mini interpreter that evaluates basic math expressions.";
+      }
+    });
+  </script>
+
+</body></html>
